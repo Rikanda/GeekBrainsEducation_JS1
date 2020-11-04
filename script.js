@@ -19,67 +19,57 @@
 // alert(a);
 
 // 2 урок
-// var a = 1, b = 1, c, d;
-// c = ++a; alert(c);           // 2
-// d = b++; alert(d);    
-// alert(a);                    // 2
-// alert(b);        // 2
-// c = (2+ ++a); alert(c);      // 5
-// d = (2+ b++); alert(d);      // 4
-// alert(a);                    // 3
-// alert(b); // 3
+
+// 2 задание
+var a = 2;
+var x = 1 + (a *= 2);
+alert("Во втором задании x=" +x);
+
+//3 задание
+var a=+prompt("Третье задание. Введите любое целое число");
+var b=+prompt("Введите еще одно произвольное целое число");
+
+//проверка с помощью if...else
+if(a>=0){
+    if(b>=0)
+        alert(a-b);
+        else
+        alert(a+b);   
+}
+else if(b>=0)
+alert(a+b);
+else
+alert(a*b);
 
 
-// // 2 задание
-// var a = 2;
-// var x = 1 + (a *= 2);
-// alert("Во втором задании x=" +x);
-
-// //3 задание
-// var a=+prompt("Третье задание. Введите любое целое число");
-// var b=+prompt("Введите еще одно произвольное целое число");
-
-// //проверка с помощью if...else
-// if(a>=0){
-//     if(b>=0)
-//         alert(a-b);
-//         else
-//         alert(a+b);   
-// }
-// else if(b>=0)
-// alert(a+b);
-// else
-// alert(a*b);
+// проверка с помощью тернарного оператора
+(a>=0&&b>=0)?(alert(a-b)):((a<0&&b<0)?alert(a*b):alert(a+b));
 
 
-// // проверка с помощью тернарного оператора
-// (a>=0&&b>=0)?(alert(a-b)):((a<0&&b<0)?alert(a*b):alert(a+b));
+// 4 задание
 
-
-// // 4 задание
-
-// function getRandomInt(min, max) {
-//     return Math.floor(Math.random() * (max - min)) + min;
-//   }
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
   
-//  var a = getRandomInt(0, 15);
-//  alert("Четвертое задание. a = " +a);
+ var a = getRandomInt(0, 15);
+ alert("Четвертое задание. Случайное число от 0 до 15 a = " +a);
 
 
-//  function getNumbers(a){
-//     var current = a;
-//     var a_string = current + " ";
-//   switch(15-a){
-//        case 0:
-//         return a_string;
-//       default:
-//           a_string +=getNumbers(++a);
-//           return a_string;
-//   }
-// }
-//   alert("Числовой ряд: " +getNumbers(a));
+ function getNumbers(a){
+    var current = a;
+    var a_string = current + " ";
+  switch(15-a){
+       case 0:
+        return a_string;
+      default:
+          a_string +=getNumbers(++a);
+          return a_string;
+  }
+}
+  alert("Числовой ряд: " +getNumbers(a));
 
-  // 5е задание
+ // 5е задание
   var arg1= +prompt("Пятое задание. Введите первый аргумент:");
   var arg2= +prompt("Введите второй аргумент:");
 
@@ -111,4 +101,55 @@
 }
 
  alert("Деление аргументов: " + mathDel(arg1, arg2));
+
+ // 6е задание
+
+ var arg1= +prompt("Шестое задание. Введите первый аргумент:");
+  var arg2= +prompt("Введите второй аргумент:");
+  var operation = prompt("Введите одно из наименований операции: сложить, вычесть, умножить, разделить");
     
+  function mathOperation(arg1, arg2, operation) {
+ switch(operation) {
+    case "сложить":
+        return mathSum(arg1, arg2);
+        break;
+
+    case "вычесть":
+        return mathRazn(arg1, arg2);
+        break;
+
+    case "умножить":
+        return mathUmn(arg1, arg2);
+        break;
+
+    case "разделить":
+        return mathDel(arg1, arg2);
+        break;
+}
+
+  }
+
+  alert ("Результат операции: " + mathOperation(arg1, arg2, operation));
+
+// 7е задание
+var res = null-0;
+alert("7 задание. Сравнение null и 0, если из первого вычесть второе: " + res);
+
+// 8е задание
+ var val=+prompt("Задание 8. Укажите любое число");
+ var pow=+prompt("Укажите степень, в которую нужно возвести число:");
+
+
+  function power(val, pow){
+    if (pow==0)
+    return 1;
+    else {
+    var current = val;
+    if(pow>1)
+    current=power(current, pow-1)*val;
+    return current;
+    }     
+  }
+
+   alert("Результат: " + power(val, pow));
+
