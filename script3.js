@@ -45,3 +45,42 @@ i+=2;
  }
 alert(string_num);
 
+// 2, 3 Функционал интернет-магазина - сущность корзины
+
+var goods = [
+{
+title : "Товар 1",
+price : 100,
+kol : 0
+},
+{
+title : "Товар 2",
+price : 150,
+kol : 0
+},
+{
+title : "Товар 3",
+price : 75,
+kol : 0
+}
+
+]
+
+// for(good of goods){
+//     console.log(good.title + " стоит " + good.price );
+// }
+
+// Запрашиваем у пользователя количество каждой позиции товара
+// Задаем переменную, в которой будем сохранять сумму
+
+var sum = 0;
+
+for(good of goods) {
+good.kol = +prompt("Введите количество товара " + good.title + ":");
+sum +=good.kol*good.price;
+console.log(good.title + ", стоит " + good.price + " руб., количество " + good.kol + " шт., сумма за товар " + (good.kol*good.price));
+}
+
+alert("Итоговая стоимость всех товаров в корзине: " + sum + " руб.");
+
+
