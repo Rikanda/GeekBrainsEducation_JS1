@@ -25,11 +25,10 @@ function numberToMas(m){
         default:
             console.log("Введено некорректное значение");
             mas = ['','',''];
-            return mas;
-        
+            return mas; 
     }
-
 }
+
 var numb;
 while(isNaN(numb)||numb == ""||numb<0){
 numb = prompt("Введите целое число от 0 до 999");}
