@@ -1,0 +1,79 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+$deskWidth: 700px;
+$deskHeight: 700px;
+
+.allspace {
+    margin: 0 auto;
+    height: $deskHeight;
+    width: $deskWidth;
+    background-color: #dcdcdc;
+}
+
+.desk__top {
+    height: ($deskHeight/10);
+    width: $deskWidth*4/5;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: $deskHeight*0.07;
+    transform: rotate(180deg);
+}
+
+.desk__bottom {
+    height: ($deskHeight/10);
+    width: $deskWidth*4/5;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: $deskHeight*0.07;
+}
+
+.playdesk {
+    display: flex;
+}
+
+.d__left {
+    height: (($deskHeight*4/5));
+    width: ($deskWidth/10);
+}
+
+.d__right {
+    height: (($deskHeight*4/5));
+    width: ($deskWidth/10);
+}
+
+.d_center {
+    height: (($deskHeight*4/5));
+    width: ($deskWidth*4/5);
+}
+
+td {
+    width: $deskWidth*0.1;
+    height: $deskHeight*0.1 ;
+    outline: 1px solid black;
+    font-size: $deskHeight*0.07;
+
+}
+
+.d__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: $deskHeight*0.07;
+    align-items: center;
+}
+
+.d__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: $deskHeight*0.07;
+    transform: rotate(180deg);
+}

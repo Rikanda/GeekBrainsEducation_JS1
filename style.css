@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.allspace {
+  margin: 0 auto;
+  height: 700px;
+  width: 700px;
+  background-color: #dcdcdc;
+}
+
+.desk__top {
+  height: 70px;
+  width: 560px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 49px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.desk__bottom {
+  height: 70px;
+  width: 560px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 49px;
+}
+
+.playdesk {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.d__left {
+  height: 560px;
+  width: 70px;
+}
+
+.d__right {
+  height: 560px;
+  width: 70px;
+}
+
+.d_center {
+  height: 560px;
+  width: 560px;
+}
+
+td {
+  width: 70px;
+  height: 70px;
+  outline: 1px solid black;
+  font-size: 49px;
+}
+
+.d__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 49px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.d__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 49px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+/*# sourceMappingURL=style.css.map */

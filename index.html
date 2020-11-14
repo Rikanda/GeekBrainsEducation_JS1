@@ -4,13 +4,191 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
- <script src="script4.js"></script>
+ <!-- <script src="script4.js"></script>
 <script src="text.js" defer></script>
-<script src="gameCode1.js" defer></script>
-
+<script src="gameCode1.js" defer></script>  -->
+<link rel="stylesheet" href="style.css">
 
 </head>
 <body>
-  
+<div class="allspace">
+<div class="desk__top"> </div>
+<div class="playdesk">
+<div class="d__left"></div>
+<div class="d__center"></div>
+<div class="d__right"></div>
+</div>
+<div class="desk__bottom"></div>
+</div>
+<script>
+var table = document.createElement("table"), tr, td, i, j, pl, pr, spt, spb;
+
+var figures = [
+{title: "Ладья",
+testcode: "&#9820;&#xfe0e;",
+testcolor: "black"
+},
+{title: "Конь",
+testcode: "&#9822;&#xfe0e;",
+testcolor: "black"
+},
+{title: "Слон",
+testcode: "&#9821;&#xfe0e;",
+testcolor: "black"
+},
+{title: "Ферзь",
+testcode: "&#9819;&#xfe0e;",
+testcolor: "black"
+},
+{title: "Король",
+testcode: "&#9818;&#xfe0e;",
+testcolor: "black"
+},
+{title: "Пешка",
+testcode: "&#9823;&#xfe0e;",
+testcolor: "black"
+},
+{title: "Ладья",
+testcode: "&#9820;&#xfe0e;",
+testcolor: "white"
+},
+{title: "Конь",
+testcode: "&#9822;&#xfe0e;",
+testcolor: "white"
+},
+{title: "Слон",
+testcode: "&#9821;&#xfe0e;",
+testcolor: "white"
+},
+{title: "Ферзь",
+testcode: "&#9819;&#xfe0e;",
+testcolor: "white"
+},
+{title: "Король",
+testcode: "&#9818;&#xfe0e;",
+testcolor: "white"
+},
+{title: "Пешка",
+testcode: "&#9823;&#xfe0e;",
+testcolor: "white"
+}
+];
+
+
+var columns = ["a","b","c","d","e","f","g","h"];
+
+for(i=1; i<=8; i++) {
+    pl=document.createElement("p");
+    pl.innerText = i;
+    document.querySelector(".d__left").append(pl);
+    pr=document.createElement("p");
+    pr.innerText = i;
+    document.querySelector(".d__right").append(pr);
+    spt=document.createElement("span");
+    spt.innerText = columns[i-1];
+    document.querySelector(".desk__top").append(spt);
+    spb=document.createElement("span");
+    spb.innerText = columns[i-1];
+    document.querySelector(".desk__bottom").append(spb);
+   
+
+    tr = document.createElement("tr");
+    table.append(tr);
+    for(j=1; j<=8; j++){
+        td = document.createElement("td");
+        
+        tr.append(td);
+         td.style.textAlign = "center";
+        if((i%2==0&&j%2!=0)||(i%2!=0&&j%2==0))
+        td.style.backgroundColor = "#c0c0c0";
+        else
+        td.style.backgroundColor = "#696969";
+        if(i==1){
+            switch(j) {
+                case 1: 
+                case 8:
+                td.innerHTML = figures[0].testcode;
+                td.style.color = figures[0].testcolor;
+                break;
+                
+                case 2:
+                case 7: 
+                td.innerHTML = figures[1].testcode;
+                td.style.color = figures[1].testcolor;
+                break; 
+
+                case 3: 
+                case 6:
+                td.innerHTML = figures[2].testcode;
+                td.style.color = figures[2].testcolor;
+                break; 
+
+                case 4: 
+                td.innerHTML = figures[3].testcode;
+                td.style.color = figures[3].testcolor;
+                break; 
+
+                case 5: 
+                td.innerHTML = figures[4].testcode;
+                td.style.color = figures[4].testcolor;
+                break;    
+            }
+
+        }
+        else if(i==2){
+    td.innerHTML = figures[5].testcode;
+    td.style.color = figures[5].testcolor; 
+       } 
+        else if(i==7){
+    td.innerHTML = figures[11].testcode;
+    td.style.color = figures[11].testcolor;
+    }
+    else if(i==8){
+        switch(j) {
+                case 1: 
+                case 8:
+                td.innerHTML = figures[6].testcode;
+                td.style.color = figures[6].testcolor;
+                break;
+                
+                case 2:
+                case 7: 
+                td.innerHTML = figures[7].testcode;
+                td.style.color = figures[7].testcolor;
+                break; 
+
+                case 3: 
+                case 6:
+                td.innerHTML = figures[8].testcode;
+                td.style.color = figures[8].testcolor;
+                break; 
+
+                case 4: 
+                td.innerHTML = figures[9].testcode;
+                td.style.color = figures[9].testcolor;
+                break; 
+
+                case 5: 
+                td.innerHTML = figures[10].testcode;
+                td.style.color = figures[10].testcolor;
+                break;    
+            }
+
+    }
+    
+
+
+    }
+
+    table.style.borderCollapse = "collapse";
+
+}
+
+
+document.querySelector(".d__center").append(table);
+
+
+</script>
+
 </body>
 </html>
